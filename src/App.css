@@ -1,0 +1,186 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+:root{
+  --background-color: rgb(26, 26, 26);
+  --background-color-darker: rgb(17, 17, 17);
+  --background-color-dark-light: rgb(32, 32, 32);
+  --background-color-hover: black;
+  --text-color:aliceblue;
+  --text-color-hover: rgb(0, 225, 255);
+  --text-color-dark:rgb(0, 44, 83);
+}
+#root{
+  height: 100vh;
+  color: var(--text-color); 
+  background-color: var(--background-color);
+}
+.moonverse-logo-display{
+  position: absolute;
+  transform: translate(-60%, -70%);
+  opacity: 0.02;
+}
+.moonverse-logo-display-2{
+  position: absolute;
+  transform: translate(-60%, 70%);
+  opacity: 0.008;
+}
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+}
+.App h1{
+  margin: 0;
+}
+
+.token-balance-wrapper{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.token-balance--form{
+  margin: 20px 0;
+  display: flex;
+}
+
+.token-balance--button, .token-balance--button-metamask,.token-balance--input{
+  padding: 10px;
+  margin-left: 5px;
+  color: var(--text-color);
+  border: 1px solid var(--text-color-dark);
+  box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7);
+}
+.token-balance--button, .token-balance--button-metamask{
+  width: max-content;
+}
+.token-balance--input{
+  width: 400px;
+}
+.token-balance--input:hover, .token-balance--button:hover, .token-balance--button-metamask:hover{
+  transform: translateY(-3px);
+  box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.7),
+            1px 2px 8px 0px rgba(0,255,255,0.7);
+}
+.token-balance--input:focus, .token-balance--button:active, .token-balance--button-metamask:active{
+  transform: translateY(3px);
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 2px 0px rgba(0,255,255,0.7),
+            0px 0px 8px 0px rgba(0,255,255,0.7),
+            inset 1px 0px 8px 0px rgba(0,255,255,0.7);
+}
+.token-list-container {
+  background-color: var(--background-color);
+  max-height: 500px;
+  overflow: auto;
+  -webkit-mask-image: linear-gradient(var(--background-color) 50%, transparent 90%);
+  mask-image: linear-gradient(var(--background-color) 50%, transparent 90%);
+}
+
+.edges{
+  border-radius: 20px;
+}
+.bg{
+  background-color: var(--background-color-darker);
+}
+.bg:hover{
+  background: var(--background-color-hover);
+}
+
+.token-list {
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  max-height: 500px;
+  overflow: auto;
+  
+}
+
+.token-list::-webkit-scrollbar{
+  width: 5px;
+  background-color: var(--background-color-dark-light);
+}
+.token-list::-webkit-scrollbar-thumb {
+  background: var(--text-color-dark); 
+  border-radius: 5px; 
+}
+.token-list::-webkit-scrollbar-thumb:hover{
+  background: var(--text-color-hover); 
+  border-radius: 5px; 
+}
+hr{
+  border: 1px solid var(--background-color-dark-light);
+  margin: 0;
+}
+.token--info{
+  display: grid;
+  grid-template-columns: 20px 50px 250px 150px 100px;
+  column-gap: 20px;
+  align-items: center;
+  padding: 10px;
+  height: fit-content;
+  
+}
+.token--info:hover{
+  color: var(--text-color-hover);
+  transition: box-shadow 1s ease;
+  box-shadow: 0px 0px 2px 0px rgba(0,255,255,0.7),
+            0px 0px 8px 0px rgba(0,255,255,0.7),
+            inset 0px 0px 10px 0px rgba(0,255,255,0.7);
+}
+
+.moonverse-logo{
+  width: 50px;
+  background-color: black;
+  border-radius: 50%;
+  padding: 5px;
+}
+.token-index{
+  opacity: 0.2;
+}
+.token-logo{
+  border-radius: 50%;
+  width: 50px;
+  text-align: left;
+  display: flex;
+}
+.token-name{
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+  opacity: 0.8;
+}
+.token-balance{
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  margin: 0;
+}
+.token-symbol{
+  text-align: left;
+  overflow-x: auto;
+  padding: 10px 0;
+  margin: 0;
+}
+.token-balance::-webkit-scrollbar, .token-symbol::-webkit-scrollbar{
+  height: 2px;
+  background-color: var(--background-color-dark-light);
+}
+.token-balance::-webkit-scrollbar-thumb, .token-symbol::-webkit-scrollbar-thumb {
+  background: var(--text-color-dark); 
+  border-radius: 5px; 
+}
+.token-balance::-webkit-scrollbar-thumb:hover, .token-symbol::-webkit-scrollbar-thumb:hover{
+  background: var(--text-color-hover); 
+  border-radius: 5px; 
+}
